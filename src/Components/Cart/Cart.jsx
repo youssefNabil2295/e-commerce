@@ -4,6 +4,7 @@ import { CartContext } from '../../CountText/CartContext'
 import { MoonLoader } from 'react-spinners'
 import toast from 'react-hot-toast'
 import { Link } from 'react-router-dom'
+import { Helmet } from 'react-helmet'
 
 export default function Cart() {
 
@@ -59,7 +60,11 @@ else{
 }
 }
 
-  return <div className='bg-main-light  '>
+  return <>
+  <Helmet>
+    <title>Cart</title>
+  </Helmet>
+  <div className='bg-main-light  '>
        <h1 className='m-3 mincolor'>shop Cart</h1>
       <h5 className='m-3'>total price: {totalCartPrice}</h5>
       <h5 className='m-3'>total items: {numOfCartItems}</h5>
@@ -136,4 +141,4 @@ else{
 
       
   </div>
-}
+</>}

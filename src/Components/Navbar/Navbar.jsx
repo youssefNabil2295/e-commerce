@@ -19,7 +19,6 @@ const {numOfCartItems} =  useContext (CartContext)
     }
 
 
-console.log(token);
   return <div className=''>
     
   <nav className="navbar navbar-expand-lg bg-body-tertiary position-relative">
@@ -59,7 +58,9 @@ console.log(token);
   </span>
           </Link>
         </li> 
-    
+        <li className="nav-item">
+          <Link className="nav-link  btn btn-light" to="/AllOrders">AllOrders</Link>
+        </li>
         </> 
         :''
       }
@@ -80,8 +81,8 @@ console.log(token);
 
         
       <Link onClick={logout} className="nav-link btn btn-outline-danger" > 
+      <i class="fa-solid fa-right-from-bracket "> Logout</i>
       
-      Logout
       
       
       </Link>
@@ -89,14 +90,17 @@ console.log(token);
     </li>    
        
   <li className="nav-item">
-    <Link className="nav-link btn btn-light" to="/profile">profile </Link>
+    <Link className="nav-link btn btn-light" to="/profile"> 
+    <i class="fa-regular fa-user"> profile </i></Link>
   </li> 
 </>: <>
-    <li className="nav-item">
-          <Link className="nav-link btn btn-outline-success " to="/Login">Login</Link>
+    <li className="nav-item mx-2">
+          <Link className="nav-link btn bg-color text-white" to="/Login">
+          <i class="fa-solid fa-right-to-bracket">Login  </i>
+          </Link>
         </li>
         <li className="nav-item">
-          <Link className="nav-link btn btn-success" to="/Register">Register</Link>
+          <Link className="nav-link btn  bg-color text-white " to="/Register">Register</Link>
         </li>
         
         </>  }

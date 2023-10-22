@@ -2,7 +2,7 @@ import axios from 'axios';
 import React, { useContext } from 'react';
 import { CartContext } from '../../CountText/CartContext';
 import toast from 'react-hot-toast';
-import { Navigate, useNavigate } from 'react-router-dom';
+import {  useNavigate } from 'react-router-dom';
 
 const Payment = () => {
   const navigate =useNavigate()
@@ -18,7 +18,7 @@ const cityValue = document.querySelector('#city').value
 const DetailsValue = document.querySelector('#Details').value
 
 
- const shippingAddress ={
+ let shippingAddress ={
   "shippingAddress":{
       "details": DetailsValue,
       "phone": PhoneValue,
@@ -47,6 +47,11 @@ const DetailsValue = document.querySelector('#Details').value
 
 
 }
+
+
+
+
+
 
 
 async  function ConfirmOnlinePayment(){

@@ -1,6 +1,7 @@
 import axios from 'axios'
 import { useFormik } from 'formik'
 import React from 'react'
+import { Helmet } from 'react-helmet'
 import { useNavigate } from 'react-router-dom'
 import * as Yup from 'yup'
 export default function ResetPassword() {
@@ -28,7 +29,10 @@ export default function ResetPassword() {
             nav('/login')
         }
     }
-    return (
+    return <>
+      <Helmet>
+    <title>ResetPassword</title>
+  </Helmet>
         <div className='w-75 mx-auto py-5 text-start'>
 
             <form onSubmit={ResetPasswordForm.handleSubmit}>
@@ -41,5 +45,5 @@ export default function ResetPassword() {
                 <button className='btn bg-min text-light'> Reset Password</button>
             </form>
         </div>
-    )
-}
+    
+</>}

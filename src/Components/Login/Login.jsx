@@ -4,6 +4,7 @@ import React, { useContext, useState } from 'react';
 import {  Link, useNavigate } from 'react-router-dom';
 import {  SyncLoader } from 'react-spinners';
  import { CounterCountText } from '../../CountText/CounterCountText';
+import { Helmet } from 'react-helmet';
 const Login = () => {
   
   
@@ -91,7 +92,12 @@ let formik = useFormik({
 
 
 
-return <div className='bg-main-light  m-3'>
+return <>
+<Helmet>
+    <title>Login</title>
+  </Helmet>
+<div className='bg-main-ligh  m-3 vh-100'>
+
 <div className='w-75 mx-auto py-5 text-start '>
         <h2 className=''>Login  </h2>
         <form className=' ' onSubmit={formik.handleSubmit}>
@@ -116,7 +122,7 @@ return <div className='bg-main-light  m-3'>
             {formik.errors.password? <div className="alert  p-2 mt-2 alert-danger"> {formik.errors.password}</div>:''}
 
 
-            <Link className='btn m-2 btn-danger'   to={'/ForgetPassword'}> ForgetPassword ...? </Link>
+            <Link className='  m-3 text-danger'   to={'/ForgetPassword'}> ForgetPassword ...? </Link>
           
         <div className='d-flex justify-content-end align-items-center'>
         
@@ -140,6 +146,6 @@ return <div className='bg-main-light  m-3'>
         
         </div>
   </div>;
-}
+</>}
 
 export default Login;

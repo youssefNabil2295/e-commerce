@@ -1,8 +1,9 @@
 import axios from 'axios';
 import { useFormik } from 'formik';
 import React, { useState } from 'react';
+import { Helmet } from 'react-helmet';
 import { useNavigate } from 'react-router-dom';
-import { PropagateLoader ,  } from 'react-spinners';
+import { PropagateLoader, SyncLoader ,  } from 'react-spinners';
 
 
 const Register = () => {
@@ -98,7 +99,10 @@ let formik = useFormik({
 
 
 
-return <div>
+return <>
+  <Helmet>
+    <title>Register</title>
+  </Helmet>
 <div className='w-75 mx-auto py-5 text-start vh-100'>
         <h3>Register now </h3>
         <form onSubmit={formik.handleSubmit}>
@@ -137,7 +141,7 @@ return <div>
         
         <button disabled={formik.isValid === false} type='submit' className=" btn bg-min text-white m-1">        
         
-        {loding?<PropagateLoader color="#4ea934"    size={40}/> :'Register'}
+        {loding?<div><SyncLoader color="#fff" /></div> :'Register'}
         
         
         
@@ -154,7 +158,7 @@ return <div>
         </form>
         
         </div>
-  </div>;
+  </>;
 }
 
 export default Register;

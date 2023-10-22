@@ -1,4 +1,5 @@
 import axios from 'axios';
+import { Helmet } from 'react-helmet';
 import { useQuery } from 'react-query';
 import { MoonLoader } from 'react-spinners';
 
@@ -30,6 +31,9 @@ if(isLoading){
 
 
   return <>
+    <Helmet>
+    <title>Brands</title>
+  </Helmet>
 
      <div className="container py-2">
      <h1 className='mincolor text-center p-4'>All Prands</h1>

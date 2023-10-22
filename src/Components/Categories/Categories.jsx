@@ -1,5 +1,6 @@
 import axios from 'axios';
 import { useEffect, useState } from 'react';
+import { Helmet } from 'react-helmet';
 import { useQuery } from 'react-query';
 import { MoonLoader } from 'react-spinners';
 
@@ -36,7 +37,9 @@ return <div className="vh-100 d-flex justify-content-center align-items-center">
 
  }
   return <>
-
+<Helmet>
+    <title>Categories</title>
+  </Helmet>
        <div className="container py-2">
   
   <div className="row">

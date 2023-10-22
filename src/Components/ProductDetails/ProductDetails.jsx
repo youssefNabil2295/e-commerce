@@ -5,6 +5,7 @@ import { useParams } from 'react-router-dom';
 import { MoonLoader, SyncLoader } from 'react-spinners';
 import { CartContext } from '../../CountText/CartContext';
 import toast from 'react-hot-toast';
+import { Helmet } from 'react-helmet';
 
 
 
@@ -62,6 +63,12 @@ if(isLoading){
 
 
 return <>
+
+<Helmet>
+    <title>{data.data.data.title.split(' ').slice(0,2).join(' ')}</title>
+  </Helmet>
+
+
 <div className='container py-5 '>
 
 <div className="row align-items-center shadow-lg">

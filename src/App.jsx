@@ -24,6 +24,7 @@ import { CartContextProvider } from './CountText/CartContext';
 import { Toaster } from 'react-hot-toast';
 import Payment from './Components/Payment/Payment';
 import AllOrders from './Components/AllOrders/AllOrders';
+import { Offline } from 'react-detect-offline';
 
 
 let routers =createBrowserRouter([
@@ -45,6 +46,7 @@ let routers =createBrowserRouter([
   
   {path:'Payment', element:<Test ><Payment/></Test>},
   {path:'AllOrders', element:<Test ><AllOrders/></Test>},
+  {path:'e-commerce', element:  <Login /> },
 
 
 
@@ -94,7 +96,13 @@ function App() {
     
     </QueryClientProvider>
 
-  
+  <Offline>
+
+        <div className="position-fixed bottom-0 start-0 p-3 rounded-3">
+          <h1> Oops.. You are offline now</h1>
+        </div>
+
+  </Offline>
     
 
     

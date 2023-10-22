@@ -7,6 +7,7 @@ import x from './Products.module.css'
 import { useQuery } from 'react-query';
 import { CartContext } from '../../CountText/CartContext';
 import toast from 'react-hot-toast';
+import { Helmet } from 'react-helmet';
 
 const Products = () => {
 
@@ -78,6 +79,10 @@ return <div className="vh-100 d-flex justify-content-center align-items-center">
 </div>
 }
   return <>
+  <Helmet>
+    <title>Products</title>
+  </Helmet>
+
 <div className="container py-5 ">
 
 <div className="row gx-2 mb-5 ">

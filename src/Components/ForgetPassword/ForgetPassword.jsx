@@ -1,6 +1,7 @@
 import axios from 'axios'
 import { useFormik } from 'formik'
 import React, { useState } from 'react'
+import { Helmet } from 'react-helmet'
 import { useNavigate } from 'react-router-dom'
 import * as Yup from 'yup'
 export default function ForgetPassword() {
@@ -59,7 +60,9 @@ export default function ForgetPassword() {
 
     return (
         <>
-
+<Helmet>
+    <title>ForgetPassword</title>
+  </Helmet>
             <div id='forgetForm' className='my-5'>
 
 
