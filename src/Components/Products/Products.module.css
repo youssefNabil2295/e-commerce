@@ -1,0 +1,7 @@
+.joo:hover {
+  box-shadow:2px 2px 4px 6px #59b559 ;
+  transform: translatex(20px);
+  transition: transform 0.5s , opacity 0.5s;
+
+}
+
